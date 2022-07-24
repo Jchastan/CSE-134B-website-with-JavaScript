@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,600;1,200;1,600&display=swap" rel="stylesheet">
+    <Title>Login</Title>
+</head>
+
+<body>
+    <header>
+		<section class="always-in-header">
+			<h1>John's Website</h1>
+		</section>
+
+		<a href="index.html">
+			<h2>Home</h2>
+		</a>
+
+        <h2>Login</h2>
+    </header>
+
+	<main class="login-page-main">
+		<form action="1.1.1.1" method="get">
+			<fieldset width=100%>
+				<legend><b>Login info:</b></legend>
+				<label for="username">Enter your username:</label>
+				<input class="login-field" type="text" id="username" name="username"><br>
+				<label for="password">Enter your password:</label>
+				<input class="login-field" type="password" id="password" name="password"><br>
+				<label for="nice_things">Say 3 nice things about this site, or else:</label>
+				<textarea id="nice_things" name="user_comments" rows="2" cols="50"></textarea>
+				<details>
+					<summary>just... say something <i>nice</i> ok?</summary>
+				</details><br>
+				<label for="favorite_color">Enter your favorite color:</label>
+				<select class="login-field" name="favorite_color" id="favorite_color">
+					<optgroup label="normal people answers">
+						<option value="red">red</option>
+						<option value="blue">blue</option>
+						<option value="orange">orange</option>
+						<option value="yellow">yellow</option>
+						<option value="green">green</option>
+						<option value="pink">pink</option>
+						<option value="purple">purple</option>
+						<option value="black">black</option>
+						<option value="white">white</option>
+					</optgroup>
+				</select><br>
+				<datalist id="colors">
+					<option value="red">red</option>
+					<option value="blue">blue</option>
+					<option value="orange">orange</option>
+					<option value="yellow">yellow</option>
+					<option value="green">green</option>
+					<option value="pink">pink</option>
+					<option value="purple">purple</option>
+					<option value="black">black</option>
+					<option value="white">white</option>
+				</datalist>
+				<label for="least_favorite_color">Enter your least favorite flavor</label>
+				<input class="login-field" list="colors" id="least_favorite_color" name="least_favorite_color"/>
+			</fieldset><br>
+			<input class="submit-button" type="submit" value="Submit">
+		</form>
+		<br />
+		<br />
+	</main>
+
+	<footer>
+		<hr/>
+		<br/>
+		<div class="footer-grid">
+			<div class="about-link">
+				<a href="about.html">
+					<b>About</b>
+				</a>
+			</div>
+			<div class="contacts-link">
+				<a href="contacts.html">
+					<b>Contacts</b>
+				</a>
+			</div>
+		</div>
+	</footer>
+</body>

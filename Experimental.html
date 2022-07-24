@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,600;1,200;1,600&display=swap" rel="stylesheet">
+    <Title>Experimental</Title>
+</head>
+
+<body>
+    <header>
+		<section class="always-in-header">
+			<h1>John's Website</h1>
+			<a class="header-link-buttons" href="Login.html">
+				Login
+			</a>
+		</section>
+
+		<h2>Experimental Web tools</h2>
+		
+		<a href="index.html">
+			<h2>Home</h2>
+		</a>
+    </header>
+
+    <main>
+		<section id="links">
+			<h3>Useful Links</h3>
+			<ul>
+				<li><a href="https://creator.nightcafe.studio/create">Ai image generation</a></li>
+				<li><a href="https://femurdesign.com/theremin/">theremin</a></li>
+				<li><a href="https://app.uberduck.ai/speak#mode=tts-basic&voice=geraltv2">Ai text to speech</a></li>
+			</ul>
+			
+			<h3>The same useful links, not in a list</h3>
+				<nav>
+					<a href="https://creator.nightcafe.studio/create">Ai image generation</a>
+					<a href="https://femurdesign.com/theremin/">theremin</a>
+					<a href="https://app.uberduck.ai/speak#mode=tts-basic&voice=geraltv2">Ai text to speech</a>
+				</nav>
+		</section>
+		<section id="Experimental_list">
+			<h2>Experimental list</h2>
+			<ol class="transforming-list">
+				<li><code>one</code></li>
+				<li><code>two</code></li>
+				<li><code>three</code></li>
+			</ol>
+			<aside><pre>Lists</pre> sure are <i>neat</i>, aren't they?</aside>
+		</section>
+
+		<section class="video">
+			<h2 class="rainbow-text"><i><strong><em>A Rick Roll</em></strong></i></h2>
+			<video controls width=90%>
+				<source src="videos/Rickroll.mp4" type="video/mp4">
+				<div class="error">Your browser does not support the video tag.</div>
+			</video>
+		</section>
+		<hr>
+		<section class="audio">
+			<h2>An audio clip</h2>
+			<audio controls class="audio-player">
+				<source src ="audio_sample.wav" type="audio/wav" alt="Anakin Skywalker's do the mario">
+			</audio>
+		</section>
+		<section class="iframe">
+			<h2>An iframe</h2>
+			<iframe src="https://bongo.cat/" title="haha cat." height="600" width=90%></iframe>
+		</section>
+
+		<h2>UCSD Images</h2>
+		<section class="img">
+			<h3>Bear</h3>
+			<figure>
+				<img src="images/bear.png" alt="Warren Bear" height="434" width="658" />
+				<figcaption>This is, in fact, actually a rock</figcaption>
+			</figure>
+			<h3>The average 6th student</h3>
+			<picture>
+				<img src="images/raccoon.jpg" height="531" width="531"  alt="Average 6th student (the image is actually of a raccoon)" />
+			</picture>
+			<h3>ucsd link</h3>
+			<a href="https://ucsd.edu" target="_blank"><img src="images/ucsd.gif" alt="UCSD" 
+				height="195" width="771"></a>
+		<h2>Secret images... shhh</h2>
+			<template>
+				<img src="secret.jpg">
+			</template>
+		</section>
+		<h2>Super important table</h2>
+		<table class="super-important-table">
+			<caption>The sacred text</caption>
+			<colgroup>
+				<col span="1" style="background-color:blue">
+				<col span="1" style="background-color:magenta">
+				<col span="1" style="background-color:magenta">
+				<col span="1" style="background-color:blue">
+			</colgroup>
+			<tr>
+				<th></th>
+				<th>rock</th>
+				<th>paper</th>
+				<th>scissors</th>
+			</tr>
+			<tr>
+				<th>rock</th>
+				<th>tie</th>
+				<th>paper</th>
+				<th>rock</th>
+			</tr>
+			<tr>
+				<th>paper</th>
+				<th>paper</th>
+				<th>tie</th>
+				<th>scissors</th>
+			</tr>
+			<tr>
+				<th>scissors</th>
+				<th>rock</th>
+				<th>scissors</th>
+				<th>tie</th>
+			</tr>
+		</table>
+		<br>
+
+		<section class="button">
+			<h2>Little special button</h2>
+			<button class="special-button">This button is just for fun</button>
+		</section>
+
+		<section class="svg">
+			<h2>A big circle</h2>
+			<svg width="300" height="300">
+				<circle cx="150" cy="150" r="120" stroke="black" stroke-width="1" fill="blue" />
+			</svg>
+		</section>
+
+		<section class="canvas">
+			<h2>A smaller rectangle</h2>
+			<canvas id="B_emoji"></canvas>
+			<script>
+				var canvas = document.getElementById("B_emoji");
+				var ctx = canvas.getContext("2d");
+				ctx.fillStyle = "#FFFFFF";
+				ctx.fillRect(0,90,180,180);
+			</script>
+		</section>
+
+    </main>
+
+	<footer>
+		<hr/>
+		<br/>
+		<div class="footer-grid">
+			<div class="about-link">
+				<a href="about.html">
+					<b>About</b>
+				</a>
+			</div>
+			<div class="contacts-link">
+				<a href="contacts.html">
+					<b>Contacts</b>
+				</a>
+			</div>
+		</div>
+	</footer>
+</body>
