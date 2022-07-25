@@ -12,7 +12,7 @@
 
     <script>
         let alert = document.getElementById("alert");
-        alert.onclick(alert('bonk'));
+        alert.addEventListener("click", alert('bonk'));
         let confirm = document.getElementById("confirm");
         confirm.onclick(confirm("are you sure you want to do nothing?"));
         let prompt = document.getElementById("prompt");
