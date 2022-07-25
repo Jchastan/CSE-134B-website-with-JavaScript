@@ -34,13 +34,14 @@
         <button id="prompt">Prompt</button>
         <button id="safer-prompt">Safer Prompt</button>
         <script>
-            let alert = document.getElementById('alert');
+            // @ts-check
+            let alertButton = document.getElementById('alert');
             alert.addEventListener("click", alert('bonk'));
-            let confirm = document.getElementById("confirm");
+            let confirmButton = document.getElementById("confirm");
             confirm.onclick(confirm("are you sure you want to do nothing?"));
-            let prompt = document.getElementById("prompt");
+            let promptButton = document.getElementById("prompt");
             prompt.onclick(prompt("This is a prompt", "I agree"));
-            let saferPrompt = document.getElementById("safer-prompt");
+            let saferPromptButton = document.getElementById("safer-prompt");
             prompt.onclick(saferPrompt("This is a safer prompt", "I agree"));
         </script>
     </main>
