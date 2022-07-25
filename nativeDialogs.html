@@ -36,13 +36,13 @@
         <script>
             // @ts-check
             let alertButton = document.getElementById('alert');
-            alert.addEventListener("click", alert('bonk'));
+            alertButton.addEventListener("click", () => alert('bonk'));
             let confirmButton = document.getElementById("confirm");
-            confirm.onclick(confirm("are you sure you want to do nothing?"));
+            confirmButton.onclick(confirm("are you sure you want to do nothing?"));
             let promptButton = document.getElementById("prompt");
-            prompt.onclick(prompt("This is a prompt", "I agree"));
+            promptButton.onclick(prompt("This is a prompt", "I agree"));
             let saferPromptButton = document.getElementById("safer-prompt");
-            prompt.onclick(saferPrompt("This is a safer prompt", "I agree"));
+            promptButton.onclick(saferPrompt("This is a safer prompt", "I agree"));
         </script>
     </main>
 	<footer>
