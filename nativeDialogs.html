@@ -9,6 +9,18 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,600;1,200;1,600&display=swap" rel="stylesheet">
     <Title>nativeDialogs</Title>
+    <script>
+        // @ts-check
+        let alertButton = document.getElementById('alert');
+        //alertButton.addEventListener("click", () => alert('bonk')); 
+        //alertButton.addEventListener("click", alert()); 
+        let confirmButton = document.getElementById("confirm");
+        confirmButton.onclick(confirm("are you sure you want to do nothing?"));
+        let promptButton = document.getElementById("prompt");
+        promptButton.onclick(prompt("This is a prompt", "I agree"));
+        let saferPromptButton = document.getElementById("safer-prompt");
+        promptButton.onclick(saferPrompt("This is a safer prompt", "I agree"));
+    </script>
 
 </head>
 
@@ -29,21 +41,10 @@
     </header>
 
     <main>
-        <button id="alert">Alert</button>
+        <button id="alert" onclick="alert('bonk')">Alert</button>
         <button id="confirm">Confirm</button>
         <button id="prompt">Prompt</button>
         <button id="safer-prompt">Safer Prompt</button>
-        <script>
-            // @ts-check
-            let alertButton = document.getElementById('alert');
-            alertButton.addEventListener("click", () => alert('bonk'));
-            let confirmButton = document.getElementById("confirm");
-            confirmButton.onclick(confirm("are you sure you want to do nothing?"));
-            let promptButton = document.getElementById("prompt");
-            promptButton.onclick(prompt("This is a prompt", "I agree"));
-            let saferPromptButton = document.getElementById("safer-prompt");
-            promptButton.onclick(saferPrompt("This is a safer prompt", "I agree"));
-        </script>
     </main>
 	<footer>
 		<hr/>
