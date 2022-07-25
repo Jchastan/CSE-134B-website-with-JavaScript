@@ -8,9 +8,12 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,600;1,200;1,600&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="src/purify.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.js">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.js">
+        import DOMPurify from 'dompurify';
+    </script>
     <Title>nativeDialogs</Title>
-    <script type="text/javascript" src="src/purify.js">
+    <script>
         // @ts-check
         let alertButton = document.getElementById('alert');
         alertButton.addEventListener("click", () => alert('bonk')); 
@@ -21,8 +24,7 @@
         let saferPromptButton = document.getElementById("safer-prompt");
         let dirty = 'dirty';
         let clean = DOMPurify.sanitize(dirty);
-        saferPromptButton.addEventListener("click", () => prompt(DOMPurify.sanitize('This is a safer prompt'), 'I agree')); 
-        //promptButton.onclick();
+        saferPromptButton.addEventListener("click", () => prompt('This is a safer prompt', 'I agree')); 
     </script>
 
 </head>
