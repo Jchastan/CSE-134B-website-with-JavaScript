@@ -16,15 +16,13 @@
     <script>
         // @ts-check
         let alertButton = document.getElementById('alert');
-        alertButton.addEventListener("click", () => alert('bonk')); 
+        alertButton.addEventListener('click', () => alert('bonk')); 
         let confirmButton = document.getElementById('confirm');
-        confirmButton.addEventListener("click", () => confirm('are you sure you want to do nothing?')); 
-        let promptButton = document.getElementById("prompt");
-        promptButton.addEventListener("click", () => prompt("This is a prompt", "I agree")); 
-        let saferPromptButton = document.getElementById("safer-prompt");
-        let dirty = 'dirty';
-        let clean = DOMPurify.sanitize(dirty);
-        saferPromptButton.addEventListener("click", () => prompt('This is a safer prompt', 'I agree')); 
+        confirmButton.addEventListener('click', () => confirm('are you sure you want to do nothing?')); 
+        let promptButton = document.getElementById('prompt');
+        promptButton.addEventListener('click', () => prompt('This is a prompt', 'I agree')); 
+        let saferPromptButton = document.getElementById('safer-prompt');
+        saferPromptButton.addEventListener('click', () => prompt('This is a safer prompt', 'I agree')); 
     </script>
 
 </head>
