@@ -59,19 +59,24 @@ header {
   color: white;
 }
 
-#website-page-buttons > .ResumeLink {
+.ResumeLink {
   grid-row: 2;
   grid-column: 1;
 }
 
-#website-page-buttons > .ProjectsLink {
+.ProjectsLink {
   grid-row: 2;
   grid-column: 2;
 }
 
-#website-page-buttons > .ExperimentalLink {
+.ExperimentalLink {
   grid-row: 2;
   grid-column: 3;
+}
+
+.nativeDialogsLink {
+  grid-row: 2;
+  grid-column: 4;
 }
 
 header hr {
