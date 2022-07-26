@@ -36,9 +36,9 @@
         let confirmButton = document.getElementById('confirm');
         confirmButton.addEventListener('click', confirmFunction); 
         let promptButton = document.getElementById('prompt');
-        promptButton.addEventListener('click', promptFunction()); 
+        promptButton.addEventListener('click', promptFunction); 
         let saferPromptButton = document.getElementById('safer-prompt');
-        saferPromptButton.addEventListener('click', safePromptFunction()); 
+        saferPromptButton.addEventListener('click', safePromptFunction); 
         function safePromptFunction() {
             let promptResponse = prompt('This is a prompt?', 'umm, yes?');
             if (DOMPurify.sanitize(promptResponse)) {
