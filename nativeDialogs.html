@@ -34,8 +34,7 @@
         let alertButton = document.getElementById('alert');
         alertButton.addEventListener('click', () => alert('bonk'));
         let confirmButton = document.getElementById('confirm');
-        let confirmResponse = '';
-        confirmButton.addEventListener('click', () => {let confirmResponse = confirm('are you sure you want to do nothing?')}); 
+        confirmButton.addEventListener('click', confirmFunction); 
         let promptButton = document.getElementById('prompt');
         promptButton.addEventListener('click', promptFunction()); 
         let saferPromptButton = document.getElementById('safer-prompt');
