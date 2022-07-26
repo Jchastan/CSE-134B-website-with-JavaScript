@@ -21,12 +21,24 @@
             document.getElementById('confirm-response').innerHTML = `The value returned by the confirm method is : ${confirmResponse}`;
         }
         function promptFunction() {
+            promptResponse = null;
             let promptResponse = prompt('This is a prompt?', 'umm, yes?');
             if (promptResponse) {
                 document.getElementById('prompt-response').innerHTML = `User typed: ${promptResponse}`;
             }
             else {
                 document.getElementById('prompt-response').innerHTML = 'User didn\'t enter anything';
+            }
+
+        }
+        function safePromptFunction() {
+            promptResponse = null;
+            let promptResponse = prompt('This is a prompt?', 'umm, yes?');
+            if (DOMPurify.sanitize(promptResponse)) {
+                document.getElementById('safe-prompt-response').innerHTML = `User typed: ${promptResponse}`;
+            }
+            else {
+                document.getElementById('safe-prompt-response').innerHTML = 'User didn\'t enter anything';
             }
 
         }
@@ -39,16 +51,6 @@
         promptButton.addEventListener('click', promptFunction); 
         let saferPromptButton = document.getElementById('safer-prompt');
         saferPromptButton.addEventListener('click', safePromptFunction); 
-        function safePromptFunction() {
-            let promptResponse = prompt('This is a prompt?', 'umm, yes?');
-            if (DOMPurify.sanitize(promptResponse)) {
-                document.getElementById('safe-prompt-response').innerHTML = `User typed: ${promptResponse}`;
-            }
-            else {
-                document.getElementById('safe-prompt-response').innerHTML = 'User didn\'t enter anything';
-            }
-
-        }
     </script>
 
 </head>
