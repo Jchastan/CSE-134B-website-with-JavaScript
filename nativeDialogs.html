@@ -23,20 +23,20 @@
         function promptFunction() {
             let promptResponse = prompt('This is a prompt?', 'umm, yes?');
             if (promptResponse) {
-                document.getElementById('prompt-output').innerHTML = `User typed: ${promptResponse}`;
+                document.getElementById('prompt-response').innerHTML = `User typed: ${promptResponse}`;
             }
             else {
-                document.getElementById('prompt-output').innerHTML = 'User didn\'t enter anything';
+                document.getElementById('prompt-response').innerHTML = 'User didn\'t enter anything';
             }
 
         }
         function safePromptFunction() {
             let promptResponse = prompt('This is a prompt?', 'umm, yes?');
             if (DOMPurify.sanitize(promptResponse)) {
-                document.getElementById('safe-prompt-output').innerHTML = `User typed: ${promptResponse}`;
+                document.getElementById('safe-prompt-response').innerHTML = `User typed: ${promptResponse}`;
             }
             else {
-                document.getElementById('safe-prompt-output').innerHTML = 'User didn\'t enter anything';
+                document.getElementById('safe-prompt-response').innerHTML = 'User didn\'t enter anything';
             }
 
         }
