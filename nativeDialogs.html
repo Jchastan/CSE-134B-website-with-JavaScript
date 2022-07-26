@@ -47,11 +47,9 @@
         let confirmResponse = '';
         confirmButton.addEventListener('click', () => {let confirmResponse = confirm('are you sure you want to do nothing?')}); 
         let promptButton = document.getElementById('prompt');
-        promptButton.addEventListener('click', () => prompt('This is a prompt', 'I agree')); 
+        promptButton.addEventListener('click', promptFunction()); 
         let saferPromptButton = document.getElementById('safer-prompt');
-        saferPromptButton.addEventListener('click', () => if (pompt('This is a safer prompt', 'I agree')) {
-
-        }); 
+        saferPromptButton.addEventListener('click', safePromptFunction()); 
     </script>
 
 </head>
