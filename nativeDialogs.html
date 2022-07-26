@@ -15,14 +15,43 @@
     <Title>nativeDialogs</Title>
     <script type="module">
         // @ts-check
+
+        function confirmFunction() {
+            let confirmResponse = confirm('are you sure you want to do nothing?');
+            document.getElementById('confirm-response').innerHTML = `The value returned by the confirm method is : ${confirmResponse}`;
+        }
+        function promptFunction() {
+            let promptResponse = prompt('This is a prompt?', 'umm, yes?');
+            if (promptResponse) {
+                document.getElementById('prompt-output').innerHTML = `User typed: ${promptResponse}`;
+            }
+            else {
+                document.getElementById('prompt-output').innerHTML = 'User didn\'t enter anything';
+            }
+
+        }
+        function safePromptFunction() {
+            let promptResponse = prompt('This is a prompt?', 'umm, yes?');
+            if (DOMPurify.sanitize(promptResponse)) {
+                document.getElementById('prompt-output').innerHTML = `User typed: ${promptResponse}`;
+            }
+            else {
+                document.getElementById('prompt-output').innerHTML = 'User didn\'t enter anything';
+            }
+
+        }
+
         let alertButton = document.getElementById('alert');
         alertButton.addEventListener('click', () => alert('bonk'));
         let confirmButton = document.getElementById('confirm');
-        confirmButton.addEventListener('click', () => confirm('are you sure you want to do nothing?')); 
+        let confirmResponse = '';
+        confirmButton.addEventListener('click', () => {let confirmResponse = confirm('are you sure you want to do nothing?')}); 
         let promptButton = document.getElementById('prompt');
         promptButton.addEventListener('click', () => prompt('This is a prompt', 'I agree')); 
         let saferPromptButton = document.getElementById('safer-prompt');
-        saferPromptButton.addEventListener('click', () => prompt('This is a safer prompt', 'I agree')); 
+        saferPromptButton.addEventListener('click', () => if (pompt('This is a safer prompt', 'I agree')) {
+
+        }); 
     </script>
 
 </head>
@@ -48,6 +77,9 @@
         <button id="confirm">Confirm</button>
         <button id="prompt">Prompt</button>
         <button id="safer-prompt">Safer Prompt</button>
+        </br>
+        </br>
+        <output id="confirm-response"></output>
     </main>
 	<footer>
 		<hr/>
