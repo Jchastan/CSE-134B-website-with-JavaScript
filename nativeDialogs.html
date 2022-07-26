@@ -30,16 +30,6 @@
             }
 
         }
-        function safePromptFunction() {
-            let promptResponse = prompt('This is a prompt?', 'umm, yes?');
-            if (DOMPurify.sanitize(promptResponse)) {
-                document.getElementById('safe-prompt-response').innerHTML = `User typed: ${promptResponse}`;
-            }
-            else {
-                document.getElementById('safe-prompt-response').innerHTML = 'User didn\'t enter anything';
-            }
-
-        }
 
         let alertButton = document.getElementById('alert');
         alertButton.addEventListener('click', () => alert('bonk'));
@@ -50,6 +40,16 @@
         promptButton.addEventListener('click', promptFunction()); 
         let saferPromptButton = document.getElementById('safer-prompt');
         saferPromptButton.addEventListener('click', safePromptFunction()); 
+        function safePromptFunction() {
+            let promptResponse = prompt('This is a prompt?', 'umm, yes?');
+            if (DOMPurify.sanitize(promptResponse)) {
+                document.getElementById('safe-prompt-response').innerHTML = `User typed: ${promptResponse}`;
+            }
+            else {
+                document.getElementById('safe-prompt-response').innerHTML = 'User didn\'t enter anything';
+            }
+
+        }
     </script>
 
 </head>
