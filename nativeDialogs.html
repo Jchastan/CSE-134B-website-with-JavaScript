@@ -21,8 +21,8 @@
             document.getElementById('confirm-response').innerHTML = `The value returned by the confirm method is : ${confirmResponse}`;
         }
         function promptFunction() {
-            promptResponse = null;
-            let promptResponse = prompt('This is a prompt?', 'umm, yes?');
+            let promptResponse = null;
+            promptResponse = prompt('This is a prompt?', 'umm, yes?');
             if (promptResponse) {
                 document.getElementById('prompt-response').innerHTML = `User typed: ${promptResponse}`;
             }
@@ -32,8 +32,8 @@
 
         }
         function safePromptFunction() {
-            promptResponse = null;
-            let promptResponse = prompt('This is a prompt?', 'umm, yes?');
+            let promptResponse = null;
+            promptResponse = prompt('This is a prompt?', 'umm, yes?');
             if (DOMPurify.sanitize(promptResponse)) {
                 document.getElementById('safe-prompt-response').innerHTML = `User typed: ${promptResponse}`;
             }
