@@ -33,10 +33,10 @@
         function safePromptFunction() {
             let promptResponse = prompt('This is a prompt?', 'umm, yes?');
             if (DOMPurify.sanitize(promptResponse)) {
-                document.getElementById('prompt-output').innerHTML = `User typed: ${promptResponse}`;
+                document.getElementById('safe-prompt-output').innerHTML = `User typed: ${promptResponse}`;
             }
             else {
-                document.getElementById('prompt-output').innerHTML = 'User didn\'t enter anything';
+                document.getElementById('safe-prompt-output').innerHTML = 'User didn\'t enter anything';
             }
 
         }
@@ -78,6 +78,10 @@
         </br>
         </br>
         <output id="confirm-response"></output>
+        </br>
+        <output id="prompt-response"></output>
+        </br>
+        <output id="safe-prompt-response"></output>
     </main>
 	<footer>
 		<hr/>
