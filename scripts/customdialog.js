@@ -1,10 +1,9 @@
 // @ts-check
-function alertDialog(dialog, okButton) {
+export function alertDialog(dialog, okButton) {
     dialog?.show();
     okButton?.addEventListener('click', () => dialog?.close())
-    document.getElementById('confirm-dialog-button').innerHTML = "what the fuck is this";
 }
-function confirmDialog(dialog, okButton, cancleButton) {
+export function confirmDialog(dialog, okButton, cancleButton) {
     dialog?.show();
     okButton?.addEventListener('click', () => {
         dialog?.close();
@@ -15,9 +14,9 @@ function confirmDialog(dialog, okButton, cancleButton) {
         return `The value returned by the confirm method is : ${false}`
     });
 }
-function promptDialog() {
+export function promptDialog() {
 
 }
-function safePromptDialog() {
+export function safePromptDialog() {
 
 }
