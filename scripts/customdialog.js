@@ -7,7 +7,7 @@ export function confirmDialog(dialog, okButton, cancleButton) {
     dialog.show();
     okButton.addEventListener('click', () => {
         dialog.close();
-        //return `The value returned by the confirm method is : ${true}`
+        return `The value returned by the confirm method is : ${true}`
     });
     cancleButton?.addEventListener('click', () => {
         dialog.close();

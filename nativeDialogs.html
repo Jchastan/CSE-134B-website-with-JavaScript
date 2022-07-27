@@ -142,14 +142,14 @@
             let alertButtonDialog = document.getElementById('alert-dialog-button');
             alertButtonDialog.addEventListener('click', () => {
                 let dialog = document.getElementById('alert-dialog');
-                let okButton = dialog.lastChild.firstChild;
+                let okButton = dialog.lastChild.firstElementChild;
                 alertDialog(dialog, okButton)
             });
             let confirmButtonDialog = document.getElementById('confirm-dialog-button');
             confirmButtonDialog.addEventListener('click', () => {
                 let dialog = document.getElementById('confirm-dialog');
-                let cancleButton = dialog.lastChild.firstChild;
-                let okButton = dialog.lastChild.lastChild;
+                let cancleButton = dialog.lastElementChild.firstChild;
+                let okButton = dialog.lastElementChild.lastElementChild;
                 let response = confirmDialog(dialog,okButton,cancleButton);
                 document.getElementById('confirm-response').innerHTML = response;
             });
