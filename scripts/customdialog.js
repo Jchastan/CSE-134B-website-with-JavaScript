@@ -2,6 +2,7 @@
 function alertDialog(dialog, okButton) {
     dialog?.show();
     okButton?.addEventListener('click', () => dialog?.close())
+    document.getElementById('confirm-dialog-button').innerHTML = "what the fuck is this";
 }
 function confirmDialog(dialog, okButton, cancleButton) {
     dialog?.show();
