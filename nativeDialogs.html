@@ -22,12 +22,10 @@
             confirmFunction
         } from './scripts/customdialog.js';
         // @ts-check
-        /*
         function confirmFunction() {
             let confirmResponse = confirm('are you sure you want to do nothing?');
             document.getElementById('confirm-response').innerHTML = `The value returned by the confirm method is : ${confirmResponse}`;
         }
-        */
         function promptFunction() {
             let promptResponse = null;
             promptResponse = prompt('This is a prompt?', 'umm, yes?');
@@ -97,6 +95,10 @@
         </br>
 
         <section class="part2">
+            <button id="alert-dialog-button">Alert</button>
+            <button id="confirm-dialog-button">Confirm</button>
+            <button id="prompt-dialog-button">Prompt</button>
+            <button id="safer-prompt-dialog-button">Safer Prompt</button>
             <dialog id="alert-dialog">
                 <h3 class="rainbow-text">John's website says:</h3>
                 <p class="dialog-message">bonk</p>
@@ -133,6 +135,20 @@
                 </div>
             </dialog>
         </section>
+        <script>
+            let dialog = document.getElementById('alert-dialog');
+        /*
+        let alertButton = document.getElementById('alert');
+        alertButton.addEventListener('click', () => alert('bonk'));
+        let confirmButton = document.getElementById('confirm');
+        confirmButton.addEventListener('click', confirmFunction); 
+        let promptButton = document.getElementById('prompt');
+        promptButton.addEventListener('click', promptFunction); 
+        let saferPromptButton = document.getElementById('safer-prompt');
+        saferPromptButton.addEventListener('click', safePromptFunction); 
+        */
+            //let alertDialogButton = document.getElementby
+        </script>
     </main>
 	<footer>
 		<hr/>
