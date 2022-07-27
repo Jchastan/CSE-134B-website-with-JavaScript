@@ -184,6 +184,33 @@ img {
   89% {color: yellow;}
 }
 
+dialog {
+  width: 20%;
+  justify-self: center;
+}
+.dialog-buttons {
+  display: grid;
+  justify-items: center;
+}
+.dialog-button {
+  background-color: purple;
+  padding: .5em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Oswald';
+  font-size: 20px;
+  text-decoration: none;
+  border: none;
+}
+.dialog-button:hover {
+  background-color: magenta;
+}
+.dialog-button:focus {
+  background-color: purple;
+}
+
 ul li {
   margin: 5px;
 }

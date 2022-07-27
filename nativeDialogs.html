@@ -11,15 +11,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.js">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.js">
         import DOMPurify from 'dompurify';
+        import {
+            confirmFunction
+        } from './customdialog.js';
     </script>
     <Title>nativeDialogs</Title>
+    <!-- I'm aware I could have moved it instead of making it type="module" but I wanted it here-->
+    <!-- Also this is for part one, part 2 I put in the right place-->
     <script type="module">
         // @ts-check
-
+        /*
         function confirmFunction() {
             let confirmResponse = confirm('are you sure you want to do nothing?');
             document.getElementById('confirm-response').innerHTML = `The value returned by the confirm method is : ${confirmResponse}`;
         }
+        */
         function promptFunction() {
             let promptResponse = null;
             promptResponse = prompt('This is a prompt?', 'umm, yes?');
@@ -72,17 +78,59 @@
     </header>
 
     <main>
-        <button id="alert">Alert</button>
-        <button id="confirm">Confirm</button>
-        <button id="prompt">Prompt</button>
-        <button id="safer-prompt">Safer Prompt</button>
+        <section class="part1">
+            <button id="alert">Alert</button>
+            <button id="confirm">Confirm</button>
+            <button id="prompt">Prompt</button>
+            <button id="safer-prompt">Safer Prompt</button>
+            <br />
+            <br />
+            <output id="confirm-response"></output>
+            <br />
+            <output id="prompt-response"></output>
+            <br />
+            <output id="safe-prompt-response"></output>
+        </section>
+
         </br>
-        </br>
-        <output id="confirm-response"></output>
-        </br>
-        <output id="prompt-response"></output>
-        </br>
-        <output id="safe-prompt-response"></output>
+
+        <section class="part2">
+            <dialog id="alert-dialog">
+                <h3 class="rainbow-text">John's website says:</h3>
+                <p class="dialog-message">bonk</p>
+                <br>
+                <div class="dialog-buttons">
+                    <button class="dialog-button">OK</button>
+                </div>
+            </dialog>
+            <dialog id="confirm-dialog">
+                <h3 class="rainbow-text">John's website says:</h3>
+                <p class="dialog-message">Are you sure you want to do nothing?</p>
+                <br>
+                <div class="dialog-buttons">
+                    <button class="dialog-button">Cancle</button>
+                    <button class="dialog-button">OK</button>
+                </div>
+            </dialog>
+            <dialog id="prompt-dialog">
+                <h3 class="rainbow-text">John's website says:</h3>
+                <p class="dialog-message">bonk</p>
+                <br>
+                <div class="dialog-buttons">
+                    <button class="dialog-button">Cancle</button>
+                    <button class="dialog-button">OK</button>
+                </div>
+            </dialog>
+            <dialog id="safe-prompt-dialog">
+                <h3 class="rainbow-text">John's website says:</h3>
+                <p class="dialog-message">bonk</p>
+                <br>
+                <div class="dialog-buttons">
+                    <button class="dialog-button">Cancle</button>
+                    <button class="dialog-button">OK</button>
+                </div>
+            </dialog>
+        </section>
     </main>
 	<footer>
 		<hr/>
