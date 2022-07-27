@@ -25,7 +25,7 @@
         }
         function promptFunction() {
             let promptResponse = null;
-            promptResponse = prompt('This is a prompt?', 'umm, yes?');
+            promptResponse = prompt('Is this a prompt?', 'umm, yes?');
             if (promptResponse) {
                 document.getElementById('prompt-response').innerHTML = `User typed: ${promptResponse}`;
             }
@@ -97,7 +97,7 @@
             <button id="prompt-dialog-button">Prompt</button>
             <button id="safer-prompt-dialog-button">Safer Prompt</button>
             <dialog id="alert-dialog">
-                <h3 class="rainbow-text">John's website says:</h3>
+                <p class="rainbow-text">John's website says:</p>
                 <p class="dialog-message">bonk</p>
                 <br>
                 <div class="dialog-buttons">
@@ -105,7 +105,7 @@
                 </div>
             </dialog>
             <dialog id="confirm-dialog">
-                <h3 class="rainbow-text">John's website says:</h3>
+                <p class="rainbow-text">John's website says:</p>
                 <p class="dialog-message">Are you sure you want to do nothing?</p>
                 <br>
                 <div class="dialog-buttons">
@@ -114,8 +114,8 @@
                 </div>
             </dialog>
             <dialog id="prompt-dialog">
-                <h3 class="rainbow-text">John's website says:</h3>
-                <p class="dialog-message">bonk</p>
+                <p class="rainbow-text">John's website says:</p>
+                <p class="dialog-message">Is this a prompt?</p>
                 <br>
                 <div class="dialog-buttons">
                     <button class="dialog-button">Cancle</button>
@@ -123,8 +123,8 @@
                 </div>
             </dialog>
             <dialog id="safe-prompt-dialog">
-                <h3 class="rainbow-text">John's website says:</h3>
-                <p class="dialog-message">bonk</p>
+                <p class="rainbow-text">John's website says:</p>
+                <p class="dialog-message">Is this a prompt?</p>
                 <br>
                 <div class="dialog-buttons">
                     <button class="dialog-button">Cancle</button>
