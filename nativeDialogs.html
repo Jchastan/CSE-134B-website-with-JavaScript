@@ -150,7 +150,8 @@
                 let dialog = document.getElementById('confirm-dialog');
                 let cancleButton = dialog.lastChild.firstChild;
                 let okButton = dialog.lastChild.lastChild;
-                confirmDialog(dialog,okButton,cancleButton);
+                let response = confirmDialog(dialog,okButton,cancleButton);
+                document.getElementById('confirm-response').innerHTML = response;
             });
             let promptButtonDialog = document.getElementById('prompt-dialog-button');
             promptButtonDialog.addEventListener('click', () => {
