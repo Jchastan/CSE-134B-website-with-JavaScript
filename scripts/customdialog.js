@@ -1,6 +1,4 @@
 // @ts-check
-//export function confirmDialog() {
-//}
 function alertDialog(dialog, okButton) {
     dialog?.show();
     okButton?.addEventListener('click', () => dialog?.close())
@@ -17,7 +15,7 @@ function confirmDialog(dialog, okButton, cancleButton) {
     });
 }
 function promptDialog() {
-    
+
 }
 function safePromptDialog() {
 
