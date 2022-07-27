@@ -188,7 +188,7 @@ dialog {
   width: 40%;
   justify-self: center;
   position: static;
-  z-index: 90%;
+  z-index: 999999px;
 }
 .dialog-buttons {
   display: grid;
@@ -211,6 +211,12 @@ dialog {
 }
 .dialog-button:active {
   background-color: purple;
+}
+.left-dialog-button {
+  grid-column: 1;
+}
+.right-dialog-button {
+  grid-column: 2;
 }
 
 ul li {
