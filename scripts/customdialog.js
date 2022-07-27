@@ -4,13 +4,13 @@ export function alertDialog(dialog, okButton) {
     okButton?.addEventListener('click', () => dialog?.close())
 }
 export function confirmDialog(dialog, okButton, cancleButton) {
-    dialog?.show();
+    dialog.show();
     okButton?.addEventListener('click', () => {
-        dialog?.close();
+        dialog.close();
         return `The value returned by the confirm method is : ${true}`
     });
     cancleButton?.addEventListener('click', () => {
-        dialog?.close();
+        dialog.close();
         return `The value returned by the confirm method is : ${false}`
     });
 }
