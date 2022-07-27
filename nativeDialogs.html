@@ -18,6 +18,12 @@
     <!-- I'm aware I could have moved it instead of making it type="module" but I wanted it here-->
     <!-- Also this is for part one, part 2 I put in the right place-->
     <script type="module">
+        import {
+            alertDialog,
+            confirmDialog,
+            promptDialog,
+            safePromptDialog
+        } from './scripts/customdialog.js';
         // @ts-check
         function confirmFunction() {
             let confirmResponse = confirm('are you sure you want to do nothing?');
