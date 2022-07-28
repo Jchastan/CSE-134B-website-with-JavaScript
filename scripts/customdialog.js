@@ -18,9 +18,9 @@ export function confirmDialog(dialog, okButton, cancleButton, target) {
 export function promptDialog(dialog, okButton, target) {
     dialog.showModal();
     let userInput = dialog.querySelector('input');
-    target.innerHTML = userInput.value;
     okButton.addEventListener('click', () => {
         dialog.close();
+        target.innerHTML = userInput.value;
     });
 }
 export function safePromptDialog() {
