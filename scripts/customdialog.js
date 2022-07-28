@@ -7,10 +7,11 @@ export function confirmDialog(dialog, okButton, cancleButton) {
     dialog.showModal();
     let response = 'fuck the police';
     okButton.addEventListener('click', (response) => {
-        dialog.close();
         response = `The value returned by the confirm method is : ${true}`;
+        dialog.close();
     });
     cancleButton?.addEventListener('click', () => {
+        response = "god I fucking hate you";
         dialog.close();
         response = `The value returned by the confirm method is : ${false}`;
     });
