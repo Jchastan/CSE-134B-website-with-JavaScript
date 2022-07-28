@@ -1,30 +1,27 @@
 // @ts-check
 export function alertDialog(dialog, okButton) {
     dialog.showModal();
-    okButton?.addEventListener('click', () => dialog?.close())
+    okButton?.addEventListener('click', () => dialog.close())
 }
-export function confirmDialog(dialog, okButton, cancleButton) {
+export function confirmDialog(dialog, okButton, cancleButton, target) {
     dialog.showModal();
     let response = 'fuck the police';
-    okButton.addEventListener('click', (response) => {
-        response = `The value returned by the confirm method is : ${true}`;
+    okButton.addEventListener('click', () => {
+        target.innerHTML = `The value returned by the confirm method is : ${true}`;
         dialog.close();
     });
     cancleButton?.addEventListener('click', () => {
-        response = "god I fucking hate you";
-        dialog.close();
         response = `The value returned by the confirm method is : ${false}`;
+        dialog.close();
     });
-    return response;
 }
-export function promptDialog(dialog, okButton) {
+export function promptDialog(dialog, okButton, target) {
     dialog.showModal();
     let userInput = dialog.querySelector('input');
-    let response = userInput.value;
+    target.innerHTML = userInput.value;
     okButton.addEventListener('click', () => {
         dialog.close();
     });
-    return response;
 }
 export function safePromptDialog() {
 

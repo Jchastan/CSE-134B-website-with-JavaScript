@@ -151,15 +151,15 @@
                 let dialog = document.getElementById('confirm-dialog');
                 let cancleButton = dialog.lastElementChild.firstElementChild;
                 let okButton = dialog.lastElementChild.lastElementChild;
-                let response = confirmDialog(dialog,okButton,cancleButton);
-                document.getElementById('confirm-response').innerHTML = response;
+                let target = document.getElementById('confirm-response');
+                confirmDialog(dialog,okButton,cancleButton, target);
             });
             let promptButtonDialog = document.getElementById('prompt-dialog-button');
             promptButtonDialog.addEventListener('click', () => {
                 let dialog = document.getElementById('prompt-dialog');
                 let okButton = dialog.lastElementChild.lastElementChild;
-                let response = promptDialog(dialog,okButton);
-                document.getElementById('prompt-response').innerHTML = response;
+                let target = document.getElementById('prompt-response');
+                let response = promptDialog(dialog,okButton, target);
             });
 
         /*
