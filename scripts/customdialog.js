@@ -5,14 +5,14 @@ export function alertDialog(dialog, okButton) {
 }
 export function confirmDialog(dialog, okButton, cancleButton) {
     dialog.showModal();
-    let response = null;
+    let response = 'fuck the police';
     okButton.addEventListener('click', () => {
         dialog.close();
-        let response = `The value returned by the confirm method is : ${true}`;
+        response = `The value returned by the confirm method is : ${true}`;
     });
     cancleButton?.addEventListener('click', () => {
         dialog.close();
-        let response = `The value returned by the confirm method is : ${false}`;
+        response = `The value returned by the confirm method is : ${false}`;
     });
     return response;
 }
