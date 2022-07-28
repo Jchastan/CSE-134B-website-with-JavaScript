@@ -23,7 +23,7 @@ export function promptDialog(dialog, okButton) {
     okButton.addEventListener('click', () => {
         dialog.close();
     });
-        return response;
+    return response;
 }
 export function safePromptDialog() {
 
