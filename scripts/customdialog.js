@@ -16,12 +16,13 @@ export function confirmDialog(dialog, okButton, cancleButton) {
 }
 export function promptDialog(dialog, okButton, cancleButton) {
     dialog.showModal();
+
     okButton?.addEventListener('click', () => {
-        dialog?.close();
+        dialog.close();
         return `The value returned by the confirm method is : ${true}`
     });
     cancleButton?.addEventListener('click', () => {
-        dialog?.close();
+        dialog.close();
         return `The value returned by the confirm method is : ${false}`
     });
 }
