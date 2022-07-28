@@ -1,6 +1,6 @@
 // @ts-check
 export function alertDialog(dialog, okButton) {
-    dialog?.show();
+    dialog.showModal();
     okButton?.addEventListener('click', () => dialog?.close())
 }
 export function confirmDialog(dialog, okButton, cancleButton) {
@@ -15,7 +15,7 @@ export function confirmDialog(dialog, okButton, cancleButton) {
     });
 }
 export function promptDialog(dialog, okButton, cancleButton) {
-    dialog?.show();
+    dialog.showModal();
     okButton?.addEventListener('click', () => {
         dialog?.close();
         return `The value returned by the confirm method is : ${true}`
