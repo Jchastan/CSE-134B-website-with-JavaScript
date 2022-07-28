@@ -14,7 +14,7 @@ export function confirmDialog(dialog, okButton, cancleButton) {
         dialog.close();
         response = `The value returned by the confirm method is : ${false}`;
     });
-    return response;
+    return "fuck";
 }
 export function promptDialog(dialog, okButton) {
     dialog.showModal();
