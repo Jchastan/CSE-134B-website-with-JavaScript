@@ -11,7 +11,7 @@ export function confirmDialog(dialog, okButton, cancleButton, target) {
         dialog.close();
     });
     cancleButton?.addEventListener('click', () => {
-        response = `The value returned by the confirm method is : ${false}`;
+        target.innerHTML = `The value returned by the confirm method is : ${false}`;
         dialog.close();
     });
 }
