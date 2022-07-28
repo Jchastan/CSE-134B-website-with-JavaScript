@@ -8,13 +8,13 @@ export function confirmDialog(dialog, okButton, cancleButton) {
     let response = null;
     okButton.addEventListener('click', () => {
         dialog.close();
-        response = `The value returned by the confirm method is : ${true}`;
+        let response = `The value returned by the confirm method is : ${true}`;
     });
     cancleButton?.addEventListener('click', () => {
         dialog.close();
-        response = `The value returned by the confirm method is : ${false}`;
+        let response = `The value returned by the confirm method is : ${false}`;
     });
-    return "fuck";
+    return response;
 }
 export function promptDialog(dialog, okButton) {
     dialog.showModal();
