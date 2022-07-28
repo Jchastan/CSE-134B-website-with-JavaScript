@@ -187,7 +187,7 @@ img {
 dialog {
   width: 40%;
   justify-self: center;
-  bottom: 70%;
+  bottom: 50%;
 }
 .dialog-buttons {
   display: grid;
